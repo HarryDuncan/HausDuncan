@@ -1,0 +1,84 @@
+//Skywards Banner SCSS
+@import"../../styles/globals";
+
+
+@media only screen and (max-width: 1080px) {
+	.bannerContainer{
+	display: none;
+	}
+}
+.bannerContainer{
+	background: white;
+	width: 50%;
+	height:100vh;
+	float: right;
+	margin-right: 5%;
+	transform: translateX(60vw);
+  	transition: transform 700ms ease-out;
+}	
+ .slideIn{
+	transform : translateX(0);
+	}
+
+.bannerImg{
+	margin-left: 2.5%;
+	width:95%;
+}
+.bannerZero{
+	-webkit-clip-path: polygon(0 35%, 100% 0, 0 100%);
+  	clip-path: polygon(0 35%, 100% 0, 0 100%);
+	width:100%;
+	animation-timing-function: linear;
+	-webkit-animation: slide 35000ms infinite;
+    animation: slide 45000ms infinite;
+}
+
+.bannerOne{
+	margin-top: -94%;
+	-webkit-clip-path: polygon(0 100%, 100% 80%, 100% 0);
+  	clip-path: polygon(0 100%, 100% 80%, 100% 0);
+	width:100%;
+	animation-timing-function: linear;
+	-webkit-animation: slide 35000ms infinite;
+    animation: slide 45000ms infinite;
+}
+.bannerTwo{
+	margin-top: -18%;
+	-webkit-clip-path: polygon(0 20%, 100% 100%, 100% 0);
+  	clip-path: polygon(0 20%, 100% 100%, 100% 0);
+	width:100%;
+	animation-timing-function: linear;
+	-webkit-animation: slide 35000ms infinite;
+    animation: slide 45000ms infinite;
+}
+.bannerThree{
+	margin-top: -174%;
+	-webkit-clip-path: polygon(0 0, 100% 0, 0 35%);;
+  	clip-path: polygon(0 0, 100% 0, 0 35%);
+	width:100%;
+	animation-timing-function: linear;
+	-webkit-animation: slide 35000ms infinite;
+    animation: slide 45000ms infinite;
+}
+.bannerFour{
+	margin-top: -14%;
+	-webkit-clip-path: polygon(0 20%, 100% 100%, 0 100%);
+  	clip-path: polygon(0 20%, 100% 100%, 0 100%);
+	width:100%;
+	animation-timing-function: linear;
+	-webkit-animation: slide 35000ms infinite;
+    animation: slide 45000ms infinite;
+}
+
+
+
+.slide{
+	@keyframes slide{
+	0% {
+	transform: translateY(0%);
+	}
+	100%{
+	transform: translateY(-184%);
+	}
+	}
+}

@@ -1,0 +1,91 @@
+@import"../../styles/globals";
+
+.dashboardMain{
+	width: 100vw;
+	
+
+	.SectionTitle{
+		float: left;
+	}
+
+	.Options{
+		clear: both;
+		margin-top: 10%;
+		position: relative;
+		width: 100vw;
+		display: flex;
+	
+
+		.Section{
+			border: 1px solid black;
+			border-radius: 5px;
+			margin: 1%;
+			height: 50vh;
+
+
+			button{
+				margin-top: 20%;
+				border-radius: 5px;
+				.link{
+				color: white;
+				}
+			}
+			}
+		}
+
+	.ActionSection{
+		border-top: 5px solid black;
+		width: 100vw;
+		height: auto;
+		overflow: hidden;
+	}
+}
+
+
+//Form Styles
+
+
+	.InputForm{
+		position: relative;
+		margin: 5%;
+		background-color: $gray-200;
+		border: 1px solid black;
+		border-radius: 5px;
+
+		h4{
+		margin-left: 10%;
+		}
+		input{
+		width: 80%;
+		margin-left: 10%;
+		}
+		textarea{
+		width: 80%;
+		margin-left: 10%;
+		}
+
+		.submitButton{
+			position: relative;
+			margin-left: 10%;
+		}
+		.imgPreview{
+		 position: relative;
+		 width: 80%;
+		 min-height: 5vw;
+		 overflow: hidden;
+		 border-radius: 0.3em;
+		 border: #0A0A0A solid 1px;
+		 margin-left: 10%;
+		 img{
+		 display: flex;
+		 width: 100%;
+		 }
+		}
+		.uploadArtBtn{
+		min-width: 20%;
+		height: 5vh;
+		margin: 3%;
+		margin-left: 10%;
+		}
+
+	}

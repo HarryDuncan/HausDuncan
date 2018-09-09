@@ -1,0 +1,138 @@
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px; }
+
+p {
+  line-height: 1.75; }
+
+a {
+  color: #0c7696; }
+  a:hover {
+    color: #085167; }
+
+.text-primary {
+  color: #0c7696 !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; }
+
+section {
+  padding: 100px 0; }
+  section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px; }
+  section h3.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none; }
+
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0; } }
+
+.btn {
+  font-weight: 700; }
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px; }
+
+.btn-primary {
+  background-color: #0c7696;
+  border-color: #0c7696; }
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #095a73 !important;
+    border-color: #095a73 !important;
+    color: white; }
+  .btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
+
+::-moz-selection {
+  background: #0c7696;
+  text-shadow: none; }
+
+::selection {
+  background: #0c7696;
+  text-shadow: none; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+.mainNav {
+  background: black;
+  z-index: 2;
+  height: 10vh;
+  display: block;
+  border: 0px;
+  border-radius: 0px; }
+  .mainNav .navbar-toggler {
+    font-size: 12px;
+    right: 0;
+    padding: 13px;
+    text-transform: uppercase;
+    color: #212529;
+    border: 0px; }
+  .mainNav .nav-item {
+    display: inline-block !important;
+    justify-content: right;
+    align-content: right;
+    float: left;
+    padding: 1.5em; }
+
+.link {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: 500;
+  padding: 0;
+  padding-bottom: 10%;
+  letter-spacing: 1px;
+  color: #f8f9fa; }
+
+.link :hover {
+  color: white; }
+
+@Media only screen and (max-width: 900px) {
+  .MobileNavBar {
+    background-color: black;
+    height: 8vh; }
+    .MobileNavBar img {
+      height: 90%; }
+    .MobileNavBar .container {
+      display: inline-block;
+      cursor: pointer;
+      float: right; }
+    .MobileNavBar .bar1, .MobileNavBar .bar2, .MobileNavBar .bar3 {
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.4s; }
+  .MobileMenu {
+    background-color: black;
+    opacity: 0.7; }
+    .MobileMenu .link {
+      display: flex;
+      font-size: 3em;
+      font-weight: 500;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30%;
+      letter-spacing: 1px;
+      color: #f8f9fa; }
+    .MobileMenu .logolink {
+      height: 100%;
+      margin-top: -10%;
+      margin-left: -5%;
+      margin-right: -5%; } }

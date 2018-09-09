@@ -1,0 +1,197 @@
+// Styling for the painting Object
+@import"../../styles/globals";
+
+.mainDiv{
+	width:auto;
+	display:flex;
+
+
+
+//STYLE FOR PAINTING TILE
+
+
+.HomePiece{
+	padding: -2%;
+	margin-right: 2%;
+	padding-left:6%;
+	padding-right:12%;
+	height: 55%;
+}
+
+.HomeArtWork{
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;
+
+ .cover{ 
+	height: 100vh;
+	min-width:  30vw;
+	background-color: black;
+	z-index: 1;
+	opacity:0;
+	}
+	
+	.HomeArtWorkImg{
+	
+	max-height:70vh;
+	}
+	.HomeArtWorkImg:hover{
+	filter: brightness(30%);
+	}
+}
+
+
+.artTitle{
+	color: white;
+	position: absolute;
+	opacity: 0;
+	z-index: 1;
+
+}
+
+
+
+
+//ANIMATIONS FOR PAINTING TILE
+
+
+.hovered{
+	animation-timing-function: ease-in-out;
+	animation: activeRight 5000ms 1 forwards;
+	-webkit-animation: showTitle 1000ms 1 forwards;
+
+    
+    }
+	@keyframes showTitle{
+	0% {
+	transform : translateY(100%);
+	opacity: 0;
+	}
+	100%{
+	transform : translateY(0);
+	opacity : 1;
+	}
+
+}
+
+
+
+//
+.Left{
+  width: 7em;
+  position:absolute;
+  z-index: 1;
+  left: 2%;
+  top:50%;
+  opacity:0.2;
+  }
+  .Left:hover{
+   opacity:0.7;
+   }
+  .Right{
+  width: 7em;
+  position:absolute;
+  z-index: 1;
+  right: -41%;
+  margin-right: -8%;
+  top:50%;
+   opacity:0.2;
+   
+  }
+  .Right:hover{
+   opacity:0.9;
+   }
+
+
+
+.slider{
+	position:absolute;
+	width: 100%;
+	display: flex;
+	flex-direction:row;
+	padding-right:3%;
+	
+	
+	}
+
+.ActiveRight{
+	
+	animation-timing-function: ease-in-out;
+	animation: activeRight 5000ms 1 forwards;
+	-webkit-animation: activeRight 5000ms 1 forwards;
+    
+    }
+	@keyframes activeRight{
+	0% {
+	left : 0%;
+	}
+	100%{
+	left: -79%;
+	}
+	}
+
+.ActiveLeft{
+	
+	animation-timing-function: ease-in-out;
+	animation: activeLeft 5000ms 1 forwards;
+	-webkit-animation: activeLeft 5000ms 1 forwards;
+    
+    }
+	@keyframes activeLeft{
+	0% {
+	left : 0%;
+	}
+	100%{
+	left: 79%;
+	}
+	}		
+}
+
+
+@Media only screen and (max-width : 1050px){
+	
+
+.HomePiece{
+	margin-top:10vh;
+	padding: 2%;
+	margin-right: 2%;
+	padding-right:15%;
+	height: 55%;
+}
+.HomeArtWork{
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+.HomeArtWorkImg{
+
+	height : 50vh;
+	max-width: 50vh;
+	max-height:200px;
+}
+.artTitle{
+	color: black;
+	position: relative;
+	opacity: 1;
+	z-index: 1;
+
+}
+.hovered{
+	color: black;
+	animation-timing-function: ease-in-out;
+	animation: activeRight 5000ms 1 forwards;
+	-webkit-animation: showTitle 1000ms 1 forwards;
+
+    
+    }
+	@keyframes showTitle{
+	0% {
+	opacity: 0;
+	}
+	100%{
+	transform : translateY(0);
+	opacity : 1;
+	}
+
+}
+}

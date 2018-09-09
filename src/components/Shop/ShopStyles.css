@@ -1,0 +1,320 @@
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px; }
+
+p {
+  line-height: 1.75; }
+
+a {
+  color: #0c7696; }
+  a:hover {
+    color: #085167; }
+
+.text-primary {
+  color: #0c7696 !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; }
+
+section {
+  padding: 100px 0; }
+  section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px; }
+  section h3.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none; }
+
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0; } }
+
+.btn {
+  font-weight: 700; }
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px; }
+
+.btn-primary {
+  background-color: #0c7696;
+  border-color: #0c7696; }
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #095a73 !important;
+    border-color: #095a73 !important;
+    color: white; }
+  .btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
+
+::-moz-selection {
+  background: #0c7696;
+  text-shadow: none; }
+
+::selection {
+  background: #0c7696;
+  text-shadow: none; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+.MainDiv {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 200vh;
+  width: auto;
+  margin: 0 auto;
+  margin-left: 2%;
+  margin-right: 3%;
+  padding-left: 3%;
+  border-top: 3px solid black;
+  padding-top: 1%; }
+
+.GalleryPiece {
+  flex: auto;
+  min-width: 30%;
+  padding-bottom: 5%; }
+
+.GalleryArtWork {
+  width: 30%;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 6px #ccc;
+  margin: 0 35px 35px 0;
+  /* Some gutter */ }
+
+.GalleryArtWorkImg {
+  width: 100%; }
+
+.GalleryArtWorkImg:hover {
+  filter: brightness(30%); }
+
+.artTitle {
+  color: white;
+  position: absolute;
+  opacity: 0;
+  z-index: 1; }
+
+.hovered {
+  animation-timing-function: ease-in-out;
+  animation: showTitle 500ms 1 forwards;
+  -webkit-animation: showTitle 500ms 1 forwards; }
+
+@keyframes showTitle {
+  0% {
+    transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+.popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+  .popUp .cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: black;
+    opacity: 0.5;
+    cursor: pointer; }
+
+.viewSection {
+  position: fixed;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-left: 10%;
+  margin-top: 10%;
+  width: 70vw;
+  height: 90vh;
+  background-color: white;
+  z-index: 4; }
+  .viewSection .ArtWorkImg {
+    max-width: 65%;
+    display: block;
+    height: 90%;
+    width: auto;
+    margin: 2%; }
+  .viewSection .PieceContent {
+    position: absolute;
+    top: 0;
+    left: 65%;
+    width: 35%;
+    height: 100%;
+    border: 1px solid black; }
+    .viewSection .PieceContent .pieceTitle {
+      position: absolute;
+      top: 0;
+      color: black;
+      margin-left: 10%; }
+    .viewSection .PieceContent .blurb {
+      position: absolute;
+      top: 25%;
+      font-size: 1.2em;
+      margin: 10%; }
+    .viewSection .PieceContent button {
+      position: absolute;
+      bottom: 20%;
+      margin: 0 auto;
+      margin-left: 15%;
+      width: 70%;
+      font-size: 2em;
+      color: white;
+      height: 10%;
+      background: linear-gradient(red, #a80000);
+      border-radius: 5px;
+      border: 2px solid  black; }
+      .viewSection .PieceContent button .none {
+        color: white;
+        text-decoration: none; }
+    .viewSection .PieceContent button:hover {
+      background: linear-gradient(#a80000 80%, red);
+      border: 1px solid black;
+      color: #e9ecef; }
+    .viewSection .PieceContent .exit {
+      top: -2%;
+      right: -2%;
+      border-radius: 50%;
+      width: 1.5em;
+      height: 1.5em; }
+
+.start {
+  animation-timing-function: ease-in-out;
+  animation: openModal 400ms 1 forwards;
+  -webkit-animation: openModal 400ms 1 forwards; }
+
+@keyframes openModal {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .MainDiv {
+    display: none; } }
+
+@Media only screen and (max-width: 900px) {
+  .MainDiv {
+    max-height: auto;
+    display: block;
+    margin-left: 4%;
+    padding: 1%; }
+  .GalleryPiece {
+    flex: auto;
+    height: auto;
+    width: 90vw;
+    padding-bottom: 5%; }
+  .GalleryArtWork {
+    max-width: 600px;
+    -webkit-box-shadow: 0 0 0 0 #ccc;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0 0 0 0 #ccc;
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 0 0 0 0 #ccc; }
+  .GalleryArtWorkImg {
+    width: 90vw; }
+  .artTitle {
+    color: black;
+    position: absolute;
+    top: -20%;
+    opacity: 1; }
+  .popUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; }
+    .popUp .cover {
+      width: 100%;
+      height: 200%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      background: black;
+      opacity: 0.5;
+      cursor: pointer; }
+  .viewSection {
+    position: relative;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-top: 10%;
+    width: 96vw;
+    height: auto;
+    background-color: white;
+    z-index: 4; }
+    .viewSection .ArtWorkImg {
+      position: relative;
+      display: block;
+      width: 90vw;
+      height: auto;
+      max-height: 100%;
+      margin: 0.5%; }
+    .viewSection .PieceContent {
+      position: relative;
+      padding-top: 100%;
+      left: 0;
+      width: 100%;
+      min-height: 30%; }
+      .viewSection .PieceContent .pieceTitle {
+        position: absolute;
+        top: 0;
+        color: black;
+        margin-left: 10%; }
+      .viewSection .PieceContent p {
+        position: absolute;
+        top: 30%;
+        margin-left: 10%; }
+      .viewSection .PieceContent button {
+        position: absolute;
+        bottom: 10%;
+        margin: 0 auto;
+        margin-left: 15%;
+        width: 70%;
+        font-size: 2em;
+        color: white;
+        height: 7vh;
+        background: linear-gradient(red, #a80000);
+        border-radius: 15px;
+        border: 2px solid  black; }
+        .viewSection .PieceContent button .none {
+          color: white;
+          text-decoration: none; }
+      .viewSection .PieceContent button:hover {
+        background: linear-gradient(#a80000 80%, red);
+        border: 1px solid black;
+        color: #e9ecef; }
+      .viewSection .PieceContent .exit {
+        background-color: #868e96;
+        top: -2%;
+        right: -2%;
+        border-radius: 50%;
+        width: 1.5em;
+        height: 1.5em; } }

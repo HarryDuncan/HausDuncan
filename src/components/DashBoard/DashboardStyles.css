@@ -1,0 +1,131 @@
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px; }
+
+p {
+  line-height: 1.75; }
+
+a {
+  color: #0c7696; }
+  a:hover {
+    color: #085167; }
+
+.text-primary {
+  color: #0c7696 !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; }
+
+section {
+  padding: 100px 0; }
+  section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px; }
+  section h3.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 75px;
+    text-transform: none; }
+
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0; } }
+
+.btn {
+  font-weight: 700; }
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px; }
+
+.btn-primary {
+  background-color: #0c7696;
+  border-color: #0c7696; }
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #095a73 !important;
+    border-color: #095a73 !important;
+    color: white; }
+  .btn-primary:active, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important; }
+
+::-moz-selection {
+  background: #0c7696;
+  text-shadow: none; }
+
+::selection {
+  background: #0c7696;
+  text-shadow: none; }
+
+img::selection {
+  background: transparent; }
+
+img::-moz-selection {
+  background: transparent; }
+
+.dashboardMain {
+  width: 100vw; }
+  .dashboardMain .SectionTitle {
+    float: left; }
+  .dashboardMain .Options {
+    clear: both;
+    margin-top: 10%;
+    position: relative;
+    width: 100vw;
+    display: flex; }
+    .dashboardMain .Options .Section {
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 1%;
+      height: 50vh; }
+      .dashboardMain .Options .Section button {
+        margin-top: 20%;
+        border-radius: 5px; }
+        .dashboardMain .Options .Section button .link {
+          color: white; }
+  .dashboardMain .ActionSection {
+    border-top: 5px solid black;
+    width: 100vw;
+    height: auto;
+    overflow: hidden; }
+
+.InputForm {
+  position: relative;
+  margin: 5%;
+  background-color: #e9ecef;
+  border: 1px solid black;
+  border-radius: 5px; }
+  .InputForm h4 {
+    margin-left: 10%; }
+  .InputForm input {
+    width: 80%;
+    margin-left: 10%; }
+  .InputForm textarea {
+    width: 80%;
+    margin-left: 10%; }
+  .InputForm .submitButton {
+    position: relative;
+    margin-left: 10%; }
+  .InputForm .imgPreview {
+    position: relative;
+    width: 80%;
+    min-height: 5vw;
+    overflow: hidden;
+    border-radius: 0.3em;
+    border: #0A0A0A solid 1px;
+    margin-left: 10%; }
+    .InputForm .imgPreview img {
+      display: flex;
+      width: 100%; }
+  .InputForm .uploadArtBtn {
+    min-width: 20%;
+    height: 5vh;
+    margin: 3%;
+    margin-left: 10%; }

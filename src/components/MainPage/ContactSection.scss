@@ -1,0 +1,143 @@
+@import"../../styles/globals";
+
+.MapContainer{
+	height: 100%;
+	width: 100%;
+	 }
+
+
+.form{
+	display:flex;
+	position: absolute;
+	opacity:0.85;
+	top:0;
+	right:5%;
+	z-index:1;
+	flex-direction: column;
+	background:white;
+	height: 100%;
+
+	width:50%;
+
+
+	h3{	margin-left: 10%;
+		padding-top:2%;
+		color: $gray-900;
+		font-size:2 em;
+	}
+	p{
+		margin-left: 10%;
+	}
+	h4{
+		font-size:1em;
+		padding:0;
+		margin-left:10%;
+		margin-top:1%;
+	}
+	textArea {
+		width: 80%;
+		padding:0;
+		margin-top:0;
+		margin: 0 auto;
+		height: 30%;
+	}
+	.formInput{
+		width: 80%;
+		padding:0;
+		margin-top:0;
+		margin: 0 auto;
+		height:2em;
+	}
+
+	button{
+		margin-left:10%;
+		margin-top: 5%;
+		width:40%;
+		background-color: $gray-500;
+		color:black;
+		border: 1px solid black;
+		font-size: 2em;
+	}
+	button:hover{
+	background-color: $gray-200;
+	}
+		
+
+}
+.noDisplay{
+	display: none;
+	opacity: 0;
+}
+.display{
+	animation-timing-function: easein;
+	-webkit-animation: fadeIn 1200ms forwards;
+    animation: fadeIn 1200ms forwards;
+}
+	.sendMessage{
+	@keyframes fadeIn{
+	0% {
+	transform: opacity(0);
+	}
+	100%{
+	transform: opacity(0.8);
+	}
+	}
+	}
+
+.send{
+	animation-timing-function: linear;
+	-webkit-animation: sendMessage 600ms forwards;
+    animation: sendMessage 600ms forwards;
+	}
+
+	.sendMessage{
+	@keyframes sendMessage{
+	0% {
+	transform: translateX(0%);
+	}
+	100%{
+	transform: translateX(150%);
+	}
+	}
+	}
+.instaLogo{
+	position: absolute;
+	bottom: 2%;
+	left: 2%;
+	height: 5vh;
+	cursor : pointer;
+}
+.column{
+	position: absolute;
+	opacity:0.6;
+	bottom:0;
+	right:5%;
+	z-index:1;
+	flex-direction: column;
+	background:white;
+	height:20%;
+	width:50%;
+
+}
+
+
+@Media only screen and (max-width: 1080px){
+	.MapContainer{
+	display: none;
+	}
+	.form{
+	opacity: 1;
+	width:100%;
+	right:0%;
+
+	button{
+	margin: 0 auto;
+	margin-top: 10%;
+	width: 60%;
+		}
+	}
+	.column{
+	display:none;
+	}
+}
+

@@ -1,0 +1,295 @@
+//DivSections SCSS
+@import"../styles/globals";
+
+
+.splashScreen{
+  height: 100vh;
+  width:100vw;
+  background: linear-gradient(to bottom, black, $gray-900);
+
+
+  img{
+  position: absolute;
+  top:58%;
+  left: 30%;
+  display:block;
+  height:20vh;
+  width:40vw;
+  margin: 0 auto;
+  padding:0px;
+ 
+  }
+
+
+  .logo{
+  positon: absolute;
+  z-index: 1;
+  top:50%;
+  left: 30%;
+ 
+
+  }
+}
+.section {
+      margin: 0px;
+      position: relative;
+      background-color:black;
+      display: flex;
+      overflow-y:hidden;
+      width: 100vw;
+      height: 100vh;
+      padding: 0px;
+
+    .leftHalf{
+    display:inline-block;
+    float:left;
+    width:50%;
+    }
+    
+    .title{
+    font-size:4.5em;
+    text-align: center;
+    padding-top:25%;
+     }
+    h1{
+    font-size:4.5em;
+    text-align: left;
+    }
+    .logoHome{
+    margin-top: 5%;
+    margin-right:auto;
+    display:block;
+    height: 40%;
+    transform: translateX(-60vw);
+    transition: transform 500ms ease-out;
+    }
+
+    .start{
+    transform: translateX(0);
+    }
+
+}
+.gallerysection {
+      position: relative;
+      background-color:white;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      padding-top: -5%;
+      padding-bottom:10%;
+      border-bottom: 4px solid $gray-900;
+    .title{
+    font-size:4.5em;
+    text-align: center;
+    padding-top:25%;
+     }
+    .Easel{
+    z-index: 1;
+    display: fixed;
+    margin-left: 1.5%;
+		width:60vw;
+		}
+
+  .galleryInner{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: auto;
+  left:20%;
+  bottom: -20%;
+ 
+  margin-left: -18%;
+  }
+
+  .scroll{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    opacity: 0.3;
+  }
+  .scroll:hover{
+    opacity: 0.8;
+  }
+  .R{
+    right: 1%;
+  }
+
+ .left{
+  left: 400px;
+ }
+
+
+}
+.contact{
+  position: relative;
+  overflow-y:none;
+      z-index: 1;
+      background-color:white;
+      display: flex;
+      width: 100vw;
+      height: 90vh;
+      padding: 0;
+      
+    .title{
+    font-size:4.5em;
+    text-align: center;
+    padding-top:25%;
+     }
+    h1{
+    font-size:4.5em;
+    text-align: left;
+    color: $gray-200;
+    }
+}
+
+
+.gallerypage {
+      position: relative;
+      background-color:white;
+      overflow-x: hidden;
+      display: block;
+      width: 100vw;
+      height: auto;
+      padding-top: 0;
+      
+      
+  .Title{
+    margin-left:-2%;
+    transform: translateX(-100vw);
+    transition: transform 700ms ease-out;
+    }
+
+  .galDiv{
+    overflow-y: auto;
+    overflow-x: none;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    transform: translateY(100vw);
+    transition: transform 1100ms ease-out;
+    }
+
+  .enter{
+  transform : translateX(0);
+  transform : translateY(0);
+  }
+}
+
+  .storePage{
+   position: relative;
+  background-color:white;
+  overflow-x: hidden;
+  display: block;
+  width: 100vw;
+  height: auto;
+  .Title{
+    margin-left:-2%;
+
+    transform: translateX(-100vw);
+    transition: transform 700ms ease-out;
+    }
+
+
+  .enter{
+  transform : translateX(0);
+  transform : translateY(0);
+  }
+
+  .storeSection{
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 100vh;
+    p{
+      margin-left: 2%;
+    }
+  }
+  
+  }
+
+
+.Footer{
+  background-color: black;
+  height: 10vh;
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  img{
+  padding-top: 1%;
+  padding-left: 2%;
+  height: 80%;
+  }
+ 
+}
+.login{
+  width: 80vw;
+}
+
+
+//For Ipad
+
+//For Mobile
+@Media only screen and (max-width : 1050px){
+
+
+  .splashScreen{
+      img{
+      top: 55%;
+      }
+  }
+
+  .section{
+      height:8vh;
+      
+      .leftHalf{
+      width: 100vw;
+
+        .logoHome{
+        display:none;
+        }
+      }
+       
+  }
+
+  .gallerysection{
+
+  .scroll{
+  display:none;
+  }
+  .Easel{
+    z-index: 1;
+    display: fixed;
+    margin-left: 1.5%;
+    width:90vw;
+    height: 20vh;
+    }
+  }
+
+  .gallerypage{
+    .Title{
+      margin-left:-2%;
+      width: 100vw;
+      }
+    }
+
+.storePage{
+
+  .Title{
+  width: 100vw;
+  }
+  }
+
+  .Footer{
+  background-color: black;
+  height: 10vh;
+  width: 100vw;
+  position: relative;
+  bottom: 0;
+  img{
+  padding-top: 5%;
+  padding-left: 2%;
+  height: 60%;
+  }
+  }
+  }
