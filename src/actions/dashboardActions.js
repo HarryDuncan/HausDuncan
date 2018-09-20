@@ -19,7 +19,7 @@ export function AttemptLogin(UserName, Password) {
 			
 			return axios.post(postMethod, body, axiosConfig)
 				.then(response =>{
-					return response.data;
+					return response.status;
 						
 					
 		  		})

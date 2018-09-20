@@ -4,7 +4,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 import {CustomMarker} from './customMarker';
 import './ContactSection.scss';
                     
-const myLocation = { lat: -36.8485, lng: 174.7633 };
+const myLocation = { lat: -37.8485, lng: 144.9631 };
 
 
 
@@ -20,7 +20,8 @@ const MapComponent = compose(
 )((props) =>
   <GoogleMap
     defaultZoom={9}
-    defaultCenter={{ lat: -36.78, lng: 175.833 }}
+   
+    defaultCenter={{  lat: -37.6136 , lng: 145.7631 }}
   >
     {props.isMarkerShown && <Marker position={myLocation} onClick={props.onMarkerClick}/>}
   </GoogleMap>

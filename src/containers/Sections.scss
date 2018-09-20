@@ -146,6 +146,7 @@
 }
 
 
+
 .gallerypage {
       position: relative;
       background-color:white;
@@ -240,7 +241,8 @@
   }
 
   .section{
-      height:8vh;
+      height:100vh;
+      background: linear-gradient(black 70%, $gray-900);
       
       .leftHalf{
       width: 100vw;

@@ -6,13 +6,6 @@ import './PaintingGallery.scss';
 
 
 
-function convertImage(imageData){
-  let binary = new Uint8Array(imageData)
-  let blob = new Blob([binary])
-  let img = new Image()
-  img.src = URL.createObjectURL(blob)
-	return img.src;
-}
 
 export class PaintingGallery extends React.Component{
 	constructor(props){

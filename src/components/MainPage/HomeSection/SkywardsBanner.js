@@ -45,7 +45,7 @@ export class SkywardsBanner extends React.Component{
 	 	  result = bannerImages.map((image) => 
 	 	  
 	 	  	<div key={image.ID} className={determineClass(image.ID)}>
-		   <img className='bannerImg' src= {require('../../Images/Banner/' + image.ImageUrl + '.jpg')} alt={image.ImageName} />
+		   <img className='bannerImg' src= {require('../../../Images/Banner/' + image.ImageUrl + '.jpg')} alt={image.ImageName} />
 		   </div>
 			);
 			

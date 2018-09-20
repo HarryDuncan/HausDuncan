@@ -33,7 +33,8 @@ export class LoginPage extends React.Component{
 
 	onSubmit = (e) =>{
 		return AttemptLogin(this.state.UserName, this.state.CurrentPassword).then(
-			(res) => {if(res == 'Authenticated'){
+			(res) => {if(res === 200){
+
 				this.props.dispatch(LoginSuccess())
 				this.setState({loggedIn : true})
 			
@@ -47,7 +48,6 @@ export class LoginPage extends React.Component{
 
 
 	render(){
-		console.log(this.state.loggedIn)
 		if(this.state.loggedIn == true){
 				return( <Redirect to='/Dashboard' />)
 			}else{

@@ -3,7 +3,7 @@ import '../DashboardStyles.scss';
 import {ImageUpload} from '../ImageUpload';
 import {UploadArt} from '../../../actions/dashboardActions';
 import {FormErrors} from '../../Forms/FormErrors.js';
-
+import {ArtPreview} from '../../ArtComponents';
 
 
 export class AddPieceForm extends React.Component{
@@ -22,6 +22,7 @@ export class AddPieceForm extends React.Component{
 			YearValid : false,
 			imgValid : false,
 			formValid : false,
+			preview : false,
 		}
 	}
 
@@ -57,12 +58,20 @@ validateForm() {
 	change = e => {
 			 const name = e.target.name;
  			 const value = e.target.value;
- 			 console.log(value);
+ 
 			 this.setState({[name]: value}, 
 
                 () => { this.validateField(name, value) });
 	}
 
+
+
+   previewPiece = () => {
+   	
+   	this.setState({
+   		preview : true
+   	})
+   }
 
 	onSubmit = (e) => {
 
@@ -75,6 +84,7 @@ validateForm() {
 	        	Blurb : this.state.Blurb,
 	        	Medium : this.state.Medium,
 	        	})
+			this.previewPiece();
 	  		UploadArt(body);
 
 		}
@@ -83,9 +93,10 @@ validateForm() {
        
       }
 
-     handleImageUpload(image, imgUrl) {
+     handleImageUpload = (image, imgUrl, imagePreviewURL) => {
+     	console.log(image)
      	this.setState({
-     		img : image,
+     		img : imagePreviewURL,
      		ImgURL : imgUrl,
      		imgValid : true
      		}, () => {
@@ -94,10 +105,14 @@ validateForm() {
      
     }
 
-   
 	
+	
+
+
 	render(){
+		
 		return(
+
 		<div className="InputForm">
 
 		<div className='panel panel-default'>
@@ -146,6 +161,15 @@ validateForm() {
 
 
 
+	   	<ArtPreview 
+	   		show={this.state.preview}
+	   		prevTitle={this.state.Title} 
+	   		prevYear={this.state.Year} 
+	   		prevBlurb={this.state.Blurb}
+	   		prevMedium={this.state.Medium}
+	   		prevImg={this.state.img}
+	   		/>
+
 		<button
 		onClick={e => this.onSubmit(e)}
 		className="btn btn-primary uploadArtBtn"
@@ -154,4 +178,5 @@ validateForm() {
 
 		)
 	}
+
 }

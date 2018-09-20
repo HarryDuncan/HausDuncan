@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactSection.scss';
-import {sendMessage} from '../../actions/emailActions.js'
+import {sendMessage} from '../../../actions/emailActions.js'
 import axios from 'axios';
 
 export class ContactForm extends React.Component{
@@ -36,7 +36,7 @@ export class ContactForm extends React.Component{
 		return(
 		<div>
 		<div className={"form " + (this.state.send ? "send" : "")} >
-		<h3>I'm Currently Based in: Auckland</h3>
+		<h3>I'm Currently Based in: Melbourne</h3>
 
 		<p> Drop me a line. I would love to hear from you.</p>
 		<h4>Name</h4>

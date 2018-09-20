@@ -2,7 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as ReactDOM from 'react-dom';
-import {HomeDiv, GalleryDiv, ContactDiv} from '../components/MainPage';
+import {HomeDiv} from '../components/MainPage/HomeSection';
+import {GalleryDiv} from '../components/MainPage/PaintingSection';
+import {ContactDiv} from '../components/MainPage/ContactSection';
 import {Footer} from '../components';
 import MetaTags from 'react-meta-tags';
 import './Sections.scss';
@@ -19,7 +21,7 @@ export const Home = (props) => {
           	</MetaTags>
 	       <HomeDiv/>
 	       <GalleryDiv/>
-	       <ContactDiv/>
+	      <ContactDiv/>
 	       <Footer/>
 	       </div>
 

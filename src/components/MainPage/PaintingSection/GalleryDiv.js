@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {PaintingObject} from './'
-import store from "../../store";
-import scrollLeft from '../../icons/scrollLeft.svg';
-import scrollRight from '../../icons/scrollRight.svg';
-import Easel from "../../icons/Easel.svg"
+import store from "../../../store";
+import scrollLeft from '../../../icons/scrollLeft.svg';
+import scrollRight from '../../../icons/scrollRight.svg';
+import Easel from "../../../icons/Easel.svg"
 
 
 export class GalleryDiv extends React.Component{

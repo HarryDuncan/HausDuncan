@@ -240,7 +240,8 @@ img::-moz-selection {
   .splashScreen img {
     top: 55%; }
   .section {
-    height: 8vh; }
+    height: 100vh;
+    background: linear-gradient(black 70%, #212529); }
     .section .leftHalf {
       width: 100vw; }
       .section .leftHalf .logoHome {

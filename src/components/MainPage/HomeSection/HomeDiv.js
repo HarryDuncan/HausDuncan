@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import logo from '../../icons/Logo.svg'
-import {NavBar} from '../';
-import {SkywardsBanner} from '../MainPage'
-import store from "../../store";
+import logo from '../../../icons/Logo.svg'
+import {NavBar} from '../../';
+import {SkywardsBanner, MobileHero} from './'
+import store from "../../../store";
 import Vivus from 'vivus';
 
 export class HomeDiv extends React.Component{
@@ -28,8 +28,20 @@ export class HomeDiv extends React.Component{
 		if(this.state.Homeloaded == false){
 			this.loadScreen();
 		}
-		return(
+		const isMobile = window.innerWidth <= 900;
+		if(isMobile){
+			return(
+				<div className="section">
+			<div className="leftHalf" >
+			<NavBar className={this.state.Homeloaded ? 'start' : '' }/>
+			<MobileHero images={this.state.images}/>
+		
+			</div>
 			
+			</div>
+				)
+		}else{
+			return(
 			<div className="section">
 			<div className="leftHalf" >
 			<NavBar className={this.state.Homeloaded ? 'start' : '' }/>
@@ -39,5 +51,7 @@ export class HomeDiv extends React.Component{
 			<SkywardsBanner images={this.state.images} transition={this.state.Homeloaded}/>
 			</div>
 		);
+		}
+		
 	}
 } 

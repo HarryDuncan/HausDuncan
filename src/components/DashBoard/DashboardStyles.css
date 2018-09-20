@@ -129,3 +129,5 @@ img::-moz-selection {
     height: 5vh;
     margin: 3%;
     margin-left: 10%; }
+  .InputForm .noShow {
+    display: none; }
