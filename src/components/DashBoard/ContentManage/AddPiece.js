@@ -9,6 +9,8 @@ import {ArtPreview} from '../../ArtComponents';
 export class AddPieceForm extends React.Component{
 	constructor(props){
 	super(props)
+	this.cancelPreview = this.cancelPreview.bind(this);
+	this.finishSubmit = this.finishSubmit.bind(this);
 	this.state ={
 			Title : '',
 			Year : '',
@@ -73,25 +75,34 @@ validateForm() {
    	})
    }
 
+   cancelPreview = () => {
+   	this.setState({
+   		preview : false
+   	})
+   }
+
+
 	onSubmit = (e) => {
 
 		e.preventDefault();
 		if(this.state.formValid == true){
-			let body = JSON.stringify({
+			this.previewPiece();
+
+		}
+       
+      }
+
+
+    finishSubmit = () => {
+    	let body = JSON.stringify({
 	        	Title : this.state.Title,
 	        	Year : this.state.Year,
 	        	ImgUrl : this.state.ImgURL,
 	        	Blurb : this.state.Blurb,
 	        	Medium : this.state.Medium,
-	        	})
-			this.previewPiece();
-	  		UploadArt(body);
-
-		}
-       
-        
-       
-      }
+	        })
+    	UploadArt(body)
+    }
 
      handleImageUpload = (image, imgUrl, imagePreviewURL) => {
      	console.log(image)
@@ -168,6 +179,8 @@ validateForm() {
 	   		prevBlurb={this.state.Blurb}
 	   		prevMedium={this.state.Medium}
 	   		prevImg={this.state.img}
+	   		viewOff={this.cancelPreview.bind(this)}
+	   		uploadItem={this.finishUpload.bind(this)}
 	   		/>
 
 		<button
