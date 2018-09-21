@@ -49,7 +49,7 @@ export function UploadArt(body){
 		      "Access-Control-Allow-Origin": "*",
 		  }
 	}
-	var postArt = process.env.REACT_APP_API_URL + 'NewPiece';
+	var postArt = process.env.REACT_APP_API_URL + 'Dashboard/NewPiece';
 	return axios.post(postArt, body, axiosConfig)
 		.then(response => {
 			return response.data;

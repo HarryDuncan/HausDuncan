@@ -2,6 +2,7 @@ import React from 'react';
 import '../DashboardStyles.scss';
 import {ImageUpload} from '../ImageUpload';
 import {UploadArt} from '../../../actions/dashboardActions';
+import {UploadToS3} from '../../../actions/S3Actions';
 import {FormErrors} from '../../Forms/FormErrors.js';
 import {ArtPreview} from '../../ArtComponents';
 
@@ -102,6 +103,10 @@ validateForm() {
 	        	Medium : this.state.Medium,
 	        })
     	UploadArt(body)
+    	UploadToS3(this.state.img, this.state.ImgURL)
+    	this.setState({
+    		preview : false
+    	})
     }
 
      handleImageUpload = (image, imgUrl, imagePreviewURL) => {
@@ -180,7 +185,7 @@ validateForm() {
 	   		prevMedium={this.state.Medium}
 	   		prevImg={this.state.img}
 	   		viewOff={this.cancelPreview.bind(this)}
-	   		uploadItem={this.finishUpload.bind(this)}
+	   		confirmUpload={this.finishSubmit.bind(this)}
 	   		/>
 
 		<button

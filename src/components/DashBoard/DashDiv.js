@@ -14,7 +14,6 @@ export class DashDiv extends React.Component {
 		}
 	}
 	render(){
-		console.log(this.state.paintings)
 		if(this.state.loggedIn === false){
 			return( <Redirect to='/Login' />)
 		}else{

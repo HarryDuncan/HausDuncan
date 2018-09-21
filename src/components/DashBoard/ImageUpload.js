@@ -36,6 +36,9 @@ export class ImageUpload extends React.Component {
   }
 
   onUpload(){
+    if(this.state.file == ''){
+      return 
+    }
     var fileName = this.formatFilename(this.state.file.name);
     this.props.onUpload(this.state.file, fileName, this.state.imagePreviewUrl )
   }
