@@ -100,6 +100,7 @@
   }
   .Right:hover{
    opacity:0.9;
+
    }
 
 
@@ -150,7 +151,37 @@
 
 @Media only screen and (max-width : 1050px){
 	
+.mainDiv{
+	.artTitle{
+	color: black;
+	opacity: 0;
+	z-index: 1;
+	}
+	.hovered{
+		color: black;
+		animation-timing-function: ease-in-out;
+		animation: activeRight 5000ms 1 forwards;
+		-webkit-animation: showTitle 1000ms 1 forwards;
+	    }
+	@keyframes showTitle{
+	0% {
+	opacity: 0;
+	color:black;
+	}
+	100%{
+	transform : translateY(0);
+	opacity : 1;
+	color:black;
+	}
+	}
 
+	.cover{
+		.HomeArtWorkImg:hover{
+	filter: brightness(100%);
+	}
+	}
+	
+}
 .HomePiece{
 	margin-top:10vh;
 	padding: 2%;
@@ -169,29 +200,6 @@
 	max-width: 50vh;
 	max-height:200px;
 }
-.artTitle{
-	color: black;
-	position: relative;
-	opacity: 1;
-	z-index: 1;
 
-}
-.hovered{
-	color: black;
-	animation-timing-function: ease-in-out;
-	animation: activeRight 5000ms 1 forwards;
-	-webkit-animation: showTitle 1000ms 1 forwards;
 
-    
-    }
-	@keyframes showTitle{
-	0% {
-	opacity: 0;
-	}
-	100%{
-	transform : translateY(0);
-	opacity : 1;
-	}
-
-}
 }

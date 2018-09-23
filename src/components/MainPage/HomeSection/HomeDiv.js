@@ -6,6 +6,9 @@ import {SkywardsBanner, MobileHero} from './'
 import store from "../../../store";
 import Vivus from 'vivus';
 
+
+
+
 export class HomeDiv extends React.Component{
 	constructor(props){
 		super(props);
@@ -29,11 +32,14 @@ export class HomeDiv extends React.Component{
 			this.loadScreen();
 		}
 		const isMobile = window.innerWidth <= 900;
-		if(isMobile){
+		let isIE = /*@cc_on!@*/false || !!document.documentMode;
+		let isEdge = !isIE && !!window.StyleMedia;
+		if(isMobile || isEdge || isIE){
 			return(
 				<div className="section">
 			<div className="leftHalf" >
 			<NavBar className={this.state.Homeloaded ? 'start' : '' }/>
+			<img className={"logoHome " +  (this.state.Homeloaded ? 'start' : '' )} src={logo} />
 			<MobileHero images={this.state.images}/>
 		
 			</div>

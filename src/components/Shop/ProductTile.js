@@ -27,7 +27,7 @@ export class ProductTile extends React.Component{
 
 	render(){
 		var product = this.props.Data;
-		var url = product.ImageUrl;
+		var url = product.imageUrl + '/Main.jpg';
 		if (this.state.view == true){
 			return(
 			<ProductTileView item={product}/>
@@ -35,7 +35,7 @@ export class ProductTile extends React.Component{
 		}else{
 		return(
 		      <Card className="ProductCard" onClick={this.viewImage.bind(this)} >
-		      <CardImg className="ProductMainImg" src={require('../../Images/Products/' + url + '/Main.jpg')} alt={product.ProductName} />
+		      <CardImg className="ProductMainImg" src={require('../../Images/Products/' + url )} alt={product.ProductName} />
 		   	  <CardBody>
 		      <CardTitle>{product.PaintingName}</CardTitle>
 		      <CardBody>{product.Price}</CardBody>

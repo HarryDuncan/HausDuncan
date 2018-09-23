@@ -4,6 +4,8 @@ import {Home, Gallery, Store, Dashboard, Login } from './containers';
 import {connect} from "react-redux";
 import {fetchPaintings} from "./actions/galleryActions";
 import {fetchBanner} from "./actions/bannerActions";
+import {fetchProducts} from "./actions/shopActions";
+import {findBrowser} from "./actions/utilityActions";
 import store from './store';
 import {LoadingPage} from "./components";
 require('dotenv').config();
@@ -13,6 +15,7 @@ require('dotenv').config();
     paintings: store.gallery.paintings,
     banner: store.gallery.bannerImages,
     loggedIn : store.gallery.loggedIn,
+    products : store.shop.products,
   };
 })
 
@@ -44,9 +47,11 @@ class App extends Component {
 
   componentWillMount(){
   this.props.dispatch(fetchBanner()),
-  this.props.dispatch(fetchPaintings())
+  this.props.dispatch(fetchPaintings()),
+  this.props.dispatch(fetchProducts())
+  var browser = findBrowser()
     
-    
+
   }
    
   render() {
@@ -57,11 +62,11 @@ class App extends Component {
     return (
       <BrowserRouter>
       <Switch>
-      <Route exact path="/" exact render={ props => <Home{...props}/>}/>
-      <Route path='/Gallery' render={Gallery}/>
-      <Route path='/Store' exact component={Store}/>
-      <Route path='/Login' exact component={Login}/>
-      <Route path='/Dashboard' component={Dashboard}/>
+      <Route exact path="/" exact render={Home} />
+      <Route path='/Gallery' render={Gallery} />
+      <Route path='/Store' exact component={Store} />
+      <Route path='/Login' exact component={Login} />
+      <Route path='/Dashboard' component={Dashboard} />
       </Switch>
       </BrowserRouter>
       

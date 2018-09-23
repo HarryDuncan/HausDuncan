@@ -3,12 +3,45 @@
 
 .wrapper{
 	.HeroImg{
+	width: 90%;
+	margin-left: 100% ;
+	margin-top:-50%;
+	transform: opacity(0);
+	transition: transform 500ms linear;
+	animation-timing-function: linear;
+	-webkit-animation: in 500ms infinite;
+    animation: in 500ms infinite;
+	}
+
+	.in{
+	opacity: 0.8;
+	}
+
+	@keyframes in{
+	0% {
+	transform: opacity(0);
+	}
+	100%{
+	transform: opacity(0.8);
+	}
+	}
+
+
+
+}
+
+
+@Media only screen and (max-width: 900px){
+	.wrapper{
+	.HeroImg{
 	width: 120%;
+	margin-top: 0%;
 	margin-left: -10%;
 	animation-timing-function: linear;
 	-webkit-animation: in 500ms infinite;
     animation: in 500ms infinite;
 	}
+
 	
 	@keyframes in{
 	0% {
@@ -22,3 +55,9 @@
 
 
 }
+
+
+
+}
+
+

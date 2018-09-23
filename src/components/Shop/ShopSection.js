@@ -1,22 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {ProductTile} from './'
+import store from '../../store';
 import {Container, Row } from 'reactstrap';
 import './ShopStyles.scss';
 
 
 export class ShopSection extends React.Component{
 	constructor(props){
-		super(props);
-		
+		super(props)
+		this.state= {
+			products : store.getState().shop.products
+		}
 	}
 
 
+	
+
 	render(){
 
-	
+	console.log(this.state.products)
 	 var  result = ''
-	 var products = this.props.products.data
+	 var products = this.state.products.data
 	 
 	if(products != null && products.length != 0){
 		const rowCount = products.length / 3;

@@ -38,7 +38,7 @@ export class MobileHero extends React.Component{
 	return(
 	<div>
 	 <div className='wrapper'>
-		   <img className='HeroImg' src= {require('../../../Images/Banner/' + bannerImages[this.state.item].ImageUrl + '.jpg')} 
+		   <img className={'HeroImg ' + 'in'} src= {require('../../../Images/Banner/' + bannerImages[this.state.item].ImageUrl + '.jpg')} 
 		   alt={bannerImages[this.state.item].ImageName} />
 	</div>
 	<ol className="carousel-indicators">
