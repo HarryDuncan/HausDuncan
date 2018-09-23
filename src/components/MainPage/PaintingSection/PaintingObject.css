@@ -120,7 +120,8 @@ img::-moz-selection {
     top: 50%;
     opacity: 0.2; }
   .mainDiv .Left:hover {
-    opacity: 0.7; }
+    opacity: 0.7;
+    transform: scale(1.5); }
   .mainDiv .Right {
     width: 7em;
     position: absolute;
@@ -148,6 +149,93 @@ img::-moz-selection {
   100% {
     left: -79%; } }
   .mainDiv .ActiveLeft {
+    animation-timing-function: ease-in-out;
+    animation: activeLeft 5000ms 1 forwards;
+    -webkit-animation: activeLeft 5000ms 1 forwards; }
+
+@keyframes activeLeft {
+  0% {
+    left: 0%; }
+  100% {
+    left: 79%; } }
+
+.mainDivIE {
+  width: auto;
+  display: block; }
+  .mainDivIE .HomePiece {
+    margin-right: 8%;
+    margin-left: 8%;
+    height: 55%; }
+  .mainDivIE .HomeArtWork {
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 3px 3px 5px 6px #ccc; }
+    .mainDivIE .HomeArtWork .cover {
+      height: 100vh;
+      min-width: 30vw;
+      background-color: black;
+      z-index: 1;
+      opacity: 0; }
+    .mainDivIE .HomeArtWork .HomeArtWorkImg {
+      max-height: 70vh; }
+    .mainDivIE .HomeArtWork .HomeArtWorkImg:hover {
+      filter: brightness(30%); }
+  .mainDivIE .artTitle {
+    color: white;
+    position: absolute;
+    opacity: 0;
+    z-index: 1; }
+  .mainDivIE .hovered {
+    animation-timing-function: ease-in-out;
+    animation: activeRight 5000ms 1 forwards;
+    -webkit-animation: showTitle 1000ms 1 forwards; }
+
+@keyframes showTitle {
+  0% {
+    transform: translateY(100%);
+    opacity: 0; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+  .mainDivIE .Left {
+    width: 7em;
+    position: absolute;
+    z-index: 1;
+    left: 2%;
+    top: 50%;
+    opacity: 0.2; }
+  .mainDivIE .Left:hover {
+    opacity: 0.7;
+    transform: scale(1.5); }
+  .mainDivIE .Right {
+    width: 7em;
+    position: absolute;
+    z-index: 1;
+    right: -41%;
+    margin-right: -8%;
+    top: 50%;
+    opacity: 0.2; }
+  .mainDivIE .Right:hover {
+    opacity: 0.9; }
+  .mainDivIE .slider {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-right: 3%; }
+  .mainDivIE .ActiveRight {
+    animation-timing-function: ease-in-out;
+    animation: activeRight 5000ms 1 forwards;
+    -webkit-animation: activeRight 5000ms 1 forwards; }
+
+@keyframes activeRight {
+  0% {
+    left: 0%; }
+  100% {
+    left: -79%; } }
+  .mainDivIE .ActiveLeft {
     animation-timing-function: ease-in-out;
     animation: activeLeft 5000ms 1 forwards;
     -webkit-animation: activeLeft 5000ms 1 forwards; }

@@ -51,7 +51,7 @@ export class GalleryTile extends React.Component{
 			<ArtView 
 			show={this.state.view}
 	   		PaintingTitle={piece.PaintingTitle} 
-	   		PaintingYear={piece.Year} 
+	   		PaintingYear={piece.PaintingYear} 
 	   		Blurb={piece.Blurb}
 	   		Medium={piece.Medium}
 	   		url={piece.ImageUrl}

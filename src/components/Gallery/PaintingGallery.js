@@ -21,6 +21,7 @@ export class PaintingGallery extends React.Component{
 	
 	 var  result = ''
 	 var painting = this.props.art.data
+	 let isIE = /*@cc_on!@*/false || !!document.documentMode;
 	 
 	if(painting != null && painting.length != 0){
 		const rowCount = painting.length / 3;
@@ -40,7 +41,7 @@ export class PaintingGallery extends React.Component{
 	
 	
 		return(
-			<Container className="MainDiv container-fluid" >
+			<Container className={ "container-fluid " + (isIE? "MainDivIE":  "MainDiv")} >
 			{result}
 			</Container>
 			);

@@ -91,9 +91,8 @@ img::-moz-selection {
 
 @Media only screen and (max-width: 900px) {
   .wrapper .HeroImg {
-    width: 120%;
+    width: 100%;
     margin-top: 0%;
-    margin-left: -10%;
     animation-timing-function: linear;
     -webkit-animation: in 500ms infinite;
     animation: in 500ms infinite; }

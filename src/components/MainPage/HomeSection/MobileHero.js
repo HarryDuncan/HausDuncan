@@ -35,13 +35,14 @@ export class MobileHero extends React.Component{
 	render(){
 	
 	var bannerImages = this.props.images.data
+	const isMobile = window.innerWidth <= 900;
 	return(
 	<div>
 	 <div className='wrapper'>
 		   <img className={'HeroImg ' + 'in'} src= {require('../../../Images/Banner/' + bannerImages[this.state.item].ImageUrl + '.jpg')} 
 		   alt={bannerImages[this.state.item].ImageName} />
 	</div>
-	<ol className="carousel-indicators">
+	<ol className={!isMobile? "webCarousel" : "carousel-indicators"}>
                     <li className={this.state.item == 0 ? "active": ""}></li>
                     <li className={this.state.item == 1 ? "active": ""} ></li>
                     <li className={this.state.item == 2 ? "active": ""} ></li>

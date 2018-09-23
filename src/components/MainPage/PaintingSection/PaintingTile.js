@@ -35,7 +35,7 @@ export class PaintingTile extends React.Component{
 		var piece = this.props.Data;
 		
 		return(
-			<Col className='HomePiece col-md-8' >
+			<Col className='HomePiece' >
 		      <Card className="HomeArtWork" onMouseOver={this.onHover.bind(this)} onMouseLeave={this.noHover.bind(this)}>
 		      <h1 className={"artTitle " + (this.state.hovered ? "hovered" : "")} >{piece.PaintingTitle}</h1>
 		      	<CardImg className="HomeArtWorkImg" src={require('../../../Images/Gallery/' + piece.ImageUrl + '.jpg')} alt={piece.PaintingTitle} />

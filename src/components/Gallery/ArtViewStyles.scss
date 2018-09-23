@@ -4,17 +4,17 @@
 
 .popUp{
   position:fixed;
-  top:0;
+  top:-20vh;
   left: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   opacity: 1;
  
     .cover{
-      width: 100%;
-      height: 100%;
-      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
       top:0;
       left: 0;
       z-index: 0;
@@ -31,7 +31,6 @@
     border-radius: 5px;
     margin:0 auto;
     margin-left: 10%;
-    margin-top: 10%;
     width: 70vw;
     height: 90vh;
     background-color: white;
@@ -77,9 +76,8 @@
       font-size:2em;
       color: white;
       height: 10%;
-      background: linear-gradient( red, $buyRed); 
-      border-radius: 5px;
-      border: 2px solid  black;
+      background-color: white; 
+      border: 10px solid  black;
 
 
       .none{

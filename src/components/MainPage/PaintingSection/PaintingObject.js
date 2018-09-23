@@ -16,6 +16,7 @@ export class PaintingObject extends React.Component{
 		}
 
 	render(){
+	let isIE = /*@cc_on!@*/false || !!document.documentMode;
 	var css = '';
 	var move = this.props.xPos;
 	var moveBy = 'translateX('+move+'%)';
@@ -32,11 +33,10 @@ export class PaintingObject extends React.Component{
 	 	  	<PaintingTile key={piece.ID} Data={piece} />
 			);
 	 }
-	
-
+		
 		return(
 
-			<div style={css} className='mainDiv' >
+			<div style={css} className={isIE ? 'mainDivIE' : 'mainDiv'} >
 			
 			<div  className='slider'>
 			{result}
