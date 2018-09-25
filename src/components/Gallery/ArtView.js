@@ -10,7 +10,7 @@ export const ArtView = (props) => {
 		}
 
 		
-		if(props.show != true){
+		if(props.show !== true){
 			return(
 				<div/>
 				)

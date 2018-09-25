@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {GalleryTile} from './'
-import { Container, Row } from 'reactstrap';
+import { Container} from 'reactstrap';
 import './PaintingGallery.scss';
 
 
@@ -23,7 +22,7 @@ export class PaintingGallery extends React.Component{
 	 var painting = this.props.art.data
 	 let isIE = /*@cc_on!@*/false || !!document.documentMode;
 	 
-	if(painting != null && painting.length != 0){
+	if(painting !== null && painting.length !== 0){
 		const rowCount = painting.length / 3;
 		 
 		 
@@ -50,6 +49,4 @@ export class PaintingGallery extends React.Component{
 
 
 }
-PaintingGallery.defaultProps = {
-	art : [],
-};
+

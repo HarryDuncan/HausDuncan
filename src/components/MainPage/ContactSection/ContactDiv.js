@@ -1,6 +1,5 @@
 import React from 'react';
 import {MapContainer, ContactForm} from './';
-import instaLogo from '../../../icons/Insta.svg';
 import './ContactSection.scss';
 
 export const ContactDiv =() => {

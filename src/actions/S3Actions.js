@@ -1,7 +1,5 @@
-import React from "react";
+
 import axios from "axios";
-import { compose, gql } from "react-apollo";
-import {graphql} from "graphql"
 
 
 

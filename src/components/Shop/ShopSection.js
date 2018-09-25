@@ -19,7 +19,6 @@ export class ShopSection extends React.Component{
 
 	render(){
 
-	console.log(this.state.products)
 	 var  result = ''
 	 var products = this.state.products.data
 	 

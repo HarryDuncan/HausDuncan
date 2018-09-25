@@ -6,6 +6,7 @@
 	width: 90%;
 	margin-left: 100% ;
 	margin-top:-50%;
+	overflow-y: hidden;
 	transform: opacity(0);
 	transition: transform 500ms linear;
 	animation-timing-function: linear;
@@ -39,7 +40,7 @@
 	.HeroImg{
 	width: 100%;
 	margin-top: 0%;
-	
+	margin-left: 0%;
 	animation-timing-function: linear;
 	-webkit-animation: in 500ms infinite;
     animation: in 500ms infinite;

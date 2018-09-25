@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {PaintingObject} from './'
 import store from "../../../store";
 import scrollLeft from '../../../icons/scrollLeft.svg';
@@ -21,7 +20,7 @@ export class GalleryDiv extends React.Component{
 				
 
 	scrollL(){
-		if(this.state.xPos == 0){
+		if(this.state.xPos === 0){
 			return;
 		}else{
 		var newX = this.state.xPos + 40;

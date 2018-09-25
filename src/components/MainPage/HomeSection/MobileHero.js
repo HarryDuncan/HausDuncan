@@ -13,7 +13,7 @@ export class MobileHero extends React.Component{
 
 
 	changeSlide = () =>{
-		if(this.state.item != 4){
+		if(this.state.item !== 4){
 			this.setState({
 				item : this.state.item + 1
 			})
@@ -43,11 +43,11 @@ export class MobileHero extends React.Component{
 		   alt={bannerImages[this.state.item].ImageName} />
 	</div>
 	<ol className={!isMobile? "webCarousel" : "carousel-indicators"}>
-                    <li className={this.state.item == 0 ? "active": ""}></li>
-                    <li className={this.state.item == 1 ? "active": ""} ></li>
-                    <li className={this.state.item == 2 ? "active": ""} ></li>
-                    <li className={this.state.item == 3 ? "active": ""} ></li>
-                    <li className={this.state.item == 4 ? "active": ""} ></li>
+                    <li className={this.state.item === 0 ? "active": ""}></li>
+                    <li className={this.state.item === 1 ? "active": ""} ></li>
+                    <li className={this.state.item === 2 ? "active": ""} ></li>
+                    <li className={this.state.item === 3 ? "active": ""} ></li>
+                    <li className={this.state.item === 4 ? "active": ""} ></li>
     </ol>
 	</div>
 	

@@ -1,349 +1,46 @@
 // Styling for the Store
 @import"../../styles/globals";
 
-
-
-
-.MainDiv{
-	display: flex;
-  flex-flow: column wrap;
-  min-height: 200vh;
-  width: auto;
-  margin: 0 auto; 
-  margin-left:2%;
-  margin-right:3%;
-  
-  padding-left:1%;
-  
-  border-top: 3px solid black;
-  padding-top: 1%;
-
-
-	
+.shop{
+  min-height: 100vh;
+  height: auto;
+  .shopSection{
+  min-height: 120vh;
+  column-count: 3;
+  display: inline-block;
+  }
 }
 
 
-.GalleryPiece{
-	flex:auto;
-	min-width: 30%;
-	padding-bottom: 5%;
-
-
+.ProductCard{
+display: inline-block;
+width: 25vw;
+margin: 5%;
+border: 1px solid black;
 }
-.GalleryArtWork{
-width: 30%;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         3px 3px 5px 6px #ccc;
-   margin: 0 35px 35px 0; /* Some gutter */
+.ProductCard:hover{
+  animation-timing-function: ease-in-out;
+  animation: hover 500ms 1 forwards;
+  -webkit-animation: hover 500ms 1 forwards;
 }
-.GalleryArtWorkImg{
+@keyframes hover{
+  0% {
+  }
+  100%{
+  transform : scale(0.9)
+  }
+
+  }
+.ProductMainImg{
 	width:100%
 }
-.GalleryArtWorkImg:hover{
-  filter: brightness(30%);
-}
-.artTitle{
-  color: white;
-  position: absolute;
-  opacity: 0;
-  z-index: 1;
-
+.ProductCardBody{
+  display:inline-block;
 }
 
-
-///Animations for showing the title  ------------------------------------->
-.hovered{
-  animation-timing-function: ease-in-out;
-  animation: showTitle 500ms 1 forwards;
-  -webkit-animation: showTitle 500ms 1 forwards;
-    
-    }
-
-  @keyframes showTitle{
-  0% {
-  transform : translateY(100%);
-  opacity: 0;
-  }
-  100%{
-  transform : translateY(0);
-  opacity : 1;
-  }
-
-}
-
-
-  //SCSS for the image view ---------------------------------->
-
-.popUp{
-  position:fixed;
-  top:0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
- 
-    .cover{
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top:0;
-      left: 0;
-      z-index: 0;
-      background: black;
-      opacity: 0.5;
-      cursor: pointer;
-    }
-
-}
-
-  .viewSection{
-    position:fixed;
-    border: 3px solid black;
-    border-radius: 5px;
-    margin:0 auto;
-    margin-left: 10%;
-    margin-top: 10%;
-    width: 70vw;
-    height: 90vh;
-    background-color: white;
-    z-index: 4;
-   
-
-    .ArtWorkImg{
-      max-width: 65%;
-      display: block;
-      height: 90%;
-      width: auto;
-      margin: 2%;
-    }
-    .PieceContent{
-      position: absolute;
-      top:0;
-      left: 65%;
-      width: 35%;
-      height: 100%;
-      border: 1px solid black;
-
-     .pieceTitle{
-      position: absolute;
-      top:0;
-      color:black;
-      margin-left: 10%;
-      }
-      .blurb{
-      position: absolute;
-      top: 25%;
-      font-size: 1.2em;
-      margin: 10%;
-
-
-      }
-     
-      button{
-      position: absolute;
-      bottom: 20%;
-      margin: 0 auto;
-      margin-left: 15%;
-      width: 70%;
-      font-size:2em;
-      color: white;
-      height: 10%;
-      background: linear-gradient( red, $buyRed); 
-      border-radius: 5px;
-      border: 2px solid  black;
-
-
-      .none{
-         color: white;
-         text-decoration: none;
-      }
-      }
-      button:hover{
-      background: linear-gradient($buyRed 80%, red);
-      border: 1px solid black;
-      color: $gray-200;
-      }
-      .exit{
-      top: -2%;
-      right: -2%;
-      border-radius: 50%;
-      width: 1.5em;
-      height: 1.5em;
-
-      }
-    }
-  }
-
-
-/// Animations for the modal opening up --------------------------------->
-
-
-  .start{
-  animation-timing-function: ease-in-out;
-  animation: openModal 400ms 1 forwards;
-  -webkit-animation: openModal 400ms 1 forwards;
-  }
-
-  @keyframes openModal{
-  0% {
-  opacity: 0;
-  }
-  100%{
-  opacity : 1;
-  }
-
-}
-
-// Responsive Design ------------------------------------------------------>
-
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px) 
-  and (orientation: portrait) {
-
-    .MainDiv{
-      display:none;
-
-    }
-
-  }
-
-@Media only screen and (max-width: 900px){
-.MainDiv{
-  max-height: auto;
-  display:block;
-  margin-left: 4%;
-  padding: 1%;
-  }
-.GalleryPiece{
-  flex:auto;
-  height: auto;
-  width: 90vw;
-  
-  padding-bottom: 5%;
-
-
-}
-.GalleryArtWork{
- max-width: 600px;
-  -webkit-box-shadow:  0 0 0 0 #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    0 0 0 0 #ccc;  /* Firefox 3.5 - 3.6 */
-  box-shadow:         0 0 0 0 #ccc;
-   
-}
-.GalleryArtWorkImg{
-  width: 90vw;
-}
-.artTitle{
+.ProductTitle{
   color: black;
-  position: absolute;
-  top: -20%;
-  opacity: 1;
-
-
+  font-size: 1.5em;
 }
 
 
-  .popUp{
-  position:fixed;
-  top:0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
- 
-    .cover{
-      width: 100%;
-      height: 200%;
-      position: absolute;
-      top:0;
-      left: 0;
-      z-index: 0;
-      background: black;
-      opacity: 0.5;
-      cursor: pointer;
-    }
-
-}
-
-  .viewSection{
-    position:relative;
-    border: 3px solid black;
-    border-radius: 5px;
-    margin:0 auto;
-    margin-left: 2%;
-    margin-top: 10%;
-    width: 96vw;
-    height: auto;
-    background-color: white;
-    z-index: 4;
-   
-
-    .ArtWorkImg{
-      position: relative;
-      display: block;
-      width: 90vw;
-      height: auto;
-      max-height: 100%;
-      margin: 0.5%;
-    }
-    .PieceContent{
-      position: relative;
-      padding-top:100%;
-      left: 0;
-      width: 100%;
-      min-height: 30%;
-      
-
-     .pieceTitle{
-      position: absolute;
-      top:0;
-      color:black;
-      margin-left: 10%;
-      }
-      p{
-      position: absolute;
-      top: 30%;
-      margin-left: 10%;
-      }
-     
-      button{
-      position: absolute;
-      bottom: 10%;
-      margin: 0 auto;
-      margin-left: 15%;
-      width: 70%;
-      font-size:2em;
-      color: white;
-      height: 7vh;
-      background: linear-gradient( red, $buyRed); 
-      border-radius: 15px;
-      border: 2px solid  black;
-
-
-      .none{
-         color: white;
-         text-decoration: none;
-      }
-      }
-      button:hover{
-      background: linear-gradient($buyRed 80%, red);
-      border: 1px solid black;
-      color: $gray-200;
-      }
-      .exit{
-      background-color :$gray-600;
-      top: -2%;
-      right: -2%;
-      border-radius: 50%;
-      width: 1.5em;
-      height: 1.5em;
-
-      }
-    }
-  }
-
-}

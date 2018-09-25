@@ -1,7 +1,5 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import * as ReactDOM from 'react-dom';
 import {HomeDiv} from '../components/MainPage/HomeSection';
 import {GalleryDiv} from '../components/MainPage/PaintingSection';
 import {ContactDiv} from '../components/MainPage/ContactSection';

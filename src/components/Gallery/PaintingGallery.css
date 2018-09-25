@@ -168,7 +168,7 @@ img::-moz-selection {
   .GalleryPiece {
     flex: auto;
     height: auto;
-    width: 90vw;
+    width: 70vw;
     padding-bottom: 5%; }
   .GalleryArtWork {
     max-width: 600px;

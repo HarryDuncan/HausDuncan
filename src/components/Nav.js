@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {Navbar, Nav,NavItem, NavLink,} from 'reactstrap';
+import {Navbar,NavItem} from 'reactstrap';
 import logo from '../icons/Logo.svg'
 import { HashLink as Link } from 'react-router-hash-link';
 import { stack as Menu } from 'react-burger-menu'
@@ -14,7 +13,7 @@ export class NavBar extends React.Component{
 		if(isMobile){
 			return(
 					<Navbar className='MobileNavBar'>
-					<img src={logo}/>
+					<img src={logo} alt="logo"/>
 					<div className="container">
 					 <div className="bar1"></div>
 					<div className="bar2"></div>

@@ -1,7 +1,5 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import * as ReactDOM from 'react-dom';
 import {NavBar, Footer} from '../components';
 import {Shop} from '../components/Shop';
 import MetaTags from 'react-meta-tags';

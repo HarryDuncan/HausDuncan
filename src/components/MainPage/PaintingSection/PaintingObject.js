@@ -1,5 +1,5 @@
 import React from 'react';
-import posed from 'react-pose';
+
 import {PaintingTile} from './PaintingTile';
 import './PaintingObject.scss';
 
@@ -9,11 +9,6 @@ import './PaintingObject.scss';
 
 
 export class PaintingObject extends React.Component{
-	constructor(props){
-		super(props);
-		
-			
-		}
 
 	render(){
 	let isIE = /*@cc_on!@*/false || !!document.documentMode;
@@ -28,7 +23,7 @@ export class PaintingObject extends React.Component{
 
 	 var  result = '';
 	 var painting = this.props.art.data
-	if(painting != null && painting.length != 0){
+	if(painting !== null && painting.length !== 0){
 	 	  result = painting.slice(0, 6).map((piece) => 
 	 	  	<PaintingTile key={piece.ID} Data={piece} />
 			);

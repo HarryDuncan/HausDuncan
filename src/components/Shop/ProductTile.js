@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardImg, CardBody,
-  CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap';
+  CardTitle } from 'reactstrap';
+
+import {ProductView} from './ProductView/ProductView.js';
 import './ShopStyles.scss';
 
 
@@ -30,15 +32,15 @@ export class ProductTile extends React.Component{
 		var url = product.imageUrl + '/Main.jpg';
 		if (this.state.view == true){
 			return(
-			<ProductTileView item={product}/>
+			<ProductView item={product}/>
 			)
 		}else{
 		return(
 		      <Card className="ProductCard" onClick={this.viewImage.bind(this)} >
 		      <CardImg className="ProductMainImg" src={require('../../Images/Products/' + url )} alt={product.ProductName} />
-		   	  <CardBody>
-		      <CardTitle>{product.PaintingName}</CardTitle>
-		      <CardBody>{product.Price}</CardBody>
+		   	  <CardBody className="ProductCardBody">
+		      <CardTitle className="ProductTitle">{product.ProductName}</CardTitle>
+		      <CardBody>AUD ${product.Price}</CardBody>
 		      <button className="btn btn-primary">Add to cart</button>
 		      </CardBody>
 		      </Card>
@@ -50,9 +52,3 @@ export class ProductTile extends React.Component{
 
 
 }
-
-export const ProductTileView = () =>{
-
-
-	<h1>TODO</h1>
-}  

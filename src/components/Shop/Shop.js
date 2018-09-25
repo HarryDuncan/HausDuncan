@@ -3,7 +3,6 @@ import {fetchProducts} from '../../actions/shopActions';
 import {ShopSection} from './';
 import store from '../../store';
 import StoreLogo from '../../icons/StoreLogo.svg';
-import {Footer} from '../';
 import {connect} from "react-redux";
 import './ShopStyles.scss';
 
@@ -44,9 +43,9 @@ export class Shop extends React.Component{
 		return(
 			<div className="storePage">
 				<img src={StoreLogo} className={"Title " +(this.state.loaded ? "enter" : "")}/>
-				<div className="storeSection">
-				<ShopSection products={this.state.products}/>
-				</div>
+				
+				<ShopSection className="storeSection" products={this.state.products}/>
+				
 			</div>
 		);
 	}

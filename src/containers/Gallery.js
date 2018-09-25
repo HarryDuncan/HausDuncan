@@ -1,7 +1,5 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import * as ReactDOM from 'react-dom';
 import { GallerySection} from '../components/Gallery';
 import {NavBar, Footer} from '../components';
 import MetaTags from 'react-meta-tags';

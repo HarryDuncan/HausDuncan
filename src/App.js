@@ -23,25 +23,11 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state ={
-    preLoaded: false,
-    loaded: false,
+    loading: true,
     loggedIn : store.getState().gallery.loggedIn,
    }
 
-   store.subscribe(() => {
-    
-    if( this.state.preLoaded == false){
-      this.setState({
-        preLoaded : true,
-        })
-    }else{
-        this.setState({
-          loaded:true
-        });
-      }
-      });
-    }
-
+   }
  
    
 
@@ -50,16 +36,23 @@ class App extends Component {
   this.props.dispatch(fetchPaintings()),
   this.props.dispatch(fetchProducts())
   var browser = findBrowser()
-    
+  }
 
+  componentDidMount(){
+     if(this.state.loading){
+       setTimeout(() => this.setState({ loading: false }), 1500);
+      }
   }
    
   render() {
-    if(this.state.loaded == false){
-      return(<LoadingPage/>);
-    }else{
-     
-    return (
+
+    
+      if(this.state.loading){
+        return(
+          <LoadingPage/>
+          );
+      }else{
+        return(
       <BrowserRouter>
       <Switch>
       <Route exact path="/" exact render={Home} />
@@ -69,9 +62,9 @@ class App extends Component {
       <Route path='/Dashboard' component={Dashboard} />
       </Switch>
       </BrowserRouter>
-      
     );
   }
+  
   }
 }
 

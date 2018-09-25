@@ -19,7 +19,6 @@ export class AddPieceForm extends React.Component{
 			Medium : '',
 			img : '',
 			imgURL : '',
-			preview : '',
 			formErrors: {Title: '', Year: ''},
 			TitleValid : false,
 			YearValid : false,
@@ -86,7 +85,7 @@ validateForm() {
 	onSubmit = (e) => {
 
 		e.preventDefault();
-		if(this.state.formValid == true){
+		if(this.state.formValid === true){
 			this.previewPiece();
 
 		}

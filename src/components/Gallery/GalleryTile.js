@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {ArtView} from './';
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap';
+import { Card, CardImg } from 'reactstrap';
 import './PaintingGallery.scss';
 
 
@@ -45,8 +43,7 @@ export class GalleryTile extends React.Component{
 	render(){
 		var piece = this.props.Data;
 		var url = piece.ImageUrl;
-		var image = '.Images/Gallery/' + url + '.jpg';
-		if (this.state.view == true){
+		if (this.state.view === true){
 			return(
 			<ArtView 
 			show={this.state.view}
