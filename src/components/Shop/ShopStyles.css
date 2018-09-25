@@ -82,7 +82,8 @@ img::-moz-selection {
   display: inline-block;
   width: 25vw;
   margin: 5%;
-  border: 1px solid black; }
+  border: 1px solid black;
+  cursor: pointer; }
 
 .ProductCard:hover {
   animation-timing-function: ease-in-out;
@@ -92,14 +93,21 @@ img::-moz-selection {
 @keyframes hover {
   0% { }
   100% {
-    transform: scale(0.9); } }
+    transform: scale(0.96); } }
 
 .ProductMainImg {
   width: 100%; }
 
 .ProductCardBody {
-  display: inline-block; }
-
-.ProductTitle {
-  color: black;
-  font-size: 1.5em; }
+  display: inline-block;
+  width: 100%; }
+  .ProductCardBody .ProductTitle {
+    color: black;
+    font-size: 1.5em;
+    margin: 2%; }
+  .ProductCardBody .ProductPrice {
+    margin: 2%;
+    font-size: 1em; }
+  .ProductCardBody .btn {
+    float: right;
+    margin: 2%; }

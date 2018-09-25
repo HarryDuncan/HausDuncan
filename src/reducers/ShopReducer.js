@@ -1,6 +1,7 @@
 export default function reducer(state={
 	fetching: false,
 	products:[],
+	cart: [],
 
 }, action){
 
@@ -15,6 +16,12 @@ switch (action.type){
 			return{
 				...state,
 				products: action.payload,
+			}
+		}
+		case "PRODUCT_ADDED" : {
+			return{
+				...state,
+				cart : state.cart.push(action.payload),
 			}
 		}
 		default:{

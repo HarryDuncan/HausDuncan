@@ -14,4 +14,9 @@ export function fetchProducts() {
 	
 }
 
+export function addToCart(product) {
+	console.log(product)
+	
+}
+
 

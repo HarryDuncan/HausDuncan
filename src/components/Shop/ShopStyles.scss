@@ -17,6 +17,7 @@ display: inline-block;
 width: 25vw;
 margin: 5%;
 border: 1px solid black;
+cursor:pointer;
 }
 .ProductCard:hover{
   animation-timing-function: ease-in-out;
@@ -27,7 +28,7 @@ border: 1px solid black;
   0% {
   }
   100%{
-  transform : scale(0.9)
+  transform : scale(0.96)
   }
 
   }
@@ -36,11 +37,23 @@ border: 1px solid black;
 }
 .ProductCardBody{
   display:inline-block;
-}
+  width: 100%;
 
-.ProductTitle{
+  .ProductTitle{
   color: black;
   font-size: 1.5em;
+  margin: 2%;
+  }
+  .ProductPrice{
+    margin:2%;
+    font-size:1em;
+  }
+  .btn{
+    float: right;
+    margin: 2%;
+  }
+
+
 }
 
 
