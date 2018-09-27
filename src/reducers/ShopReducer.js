@@ -13,15 +13,16 @@ switch (action.type){
 			}
 		}
 		case "FETCH_PRODUCTS_FUFILLED": {
+			;
 			return{
 				...state,
 				products: action.payload,
 			}
 		}
-		case "PRODUCT_ADDED" : {
+		case "ADDED_TO_CART" : {
 			return{
 				...state,
-				cart : state.cart.push(action.payload),
+				cart : state.cart.concat(action.payload),
 			}
 		}
 		default:{

@@ -4,11 +4,14 @@ import {NavBar, Footer} from '../components';
 import {Shop} from '../components/Shop';
 import MetaTags from 'react-meta-tags';
 import './Sections.scss';
+import {connect} from "react-redux";
+import {fetchProducts} from '../actions/shopActions';
 
 
 
 export const Store = () => {
 	return (
+			
 	       <div className="divWrapper">
 	       <MetaTags>
             <title>Haus Duncan Shop</title>

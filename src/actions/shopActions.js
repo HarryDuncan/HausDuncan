@@ -15,7 +15,10 @@ export function fetchProducts() {
 }
 
 export function addToCart(product) {
-	console.log(product)
+	
+	return function(dispatch){
+		dispatch({type : "ADDED_TO_CART", payload: product})
+	}
 	
 }
 

@@ -5,7 +5,6 @@ import {connect} from "react-redux";
 import {fetchPaintings} from "./actions/galleryActions";
 import {fetchBanner} from "./actions/bannerActions";
 import {fetchProducts} from "./actions/shopActions";
-import {findBrowser} from "./actions/utilityActions";
 import store from './store';
 import {LoadingPage} from "./components";
 require('dotenv').config();
@@ -15,7 +14,7 @@ require('dotenv').config();
     paintings: store.gallery.paintings,
     banner: store.gallery.bannerImages,
     loggedIn : store.gallery.loggedIn,
-    products : store.shop.products,
+    cart : store.shop.cart,
   };
 })
 
@@ -25,20 +24,16 @@ class App extends Component {
     this.state ={
     loading: true,
     loggedIn : store.getState().gallery.loggedIn,
+    cart : store.getState().shop.cart,
+
    }
 
    }
  
    
-
-  componentWillMount(){
-  this.props.dispatch(fetchBanner()),
-  this.props.dispatch(fetchPaintings()),
-  this.props.dispatch(fetchProducts())
-  var browser = findBrowser()
-  }
-
   componentDidMount(){
+      this.props.dispatch(fetchBanner()),
+      this.props.dispatch(fetchPaintings())
      if(this.state.loading){
        setTimeout(() => this.setState({ loading: false }), 1500);
       }

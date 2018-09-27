@@ -4,6 +4,7 @@ import logo from '../icons/Logo.svg'
 import { HashLink as Link } from 'react-router-hash-link';
 import { stack as Menu } from 'react-burger-menu'
 import './NavBar.scss';
+import {cart} from './Shop/Checkout';
 
 
 export class NavBar extends React.Component{

@@ -23,29 +23,29 @@
       cursor: pointer;
     }
 
-}
+
 
   .viewSection{
     position:fixed;
     border: 3px solid black;
     border-radius: 5px;
     margin:0 auto;
-    margin-left: 10%;
-    margin-top: 10%;
-    width: 70vw;
+    margin-left: 7%;
+    margin-top: 4%;
+    width: 86vw;
     height: 90vh;
     background-color: white;
     z-index: 4;
    
 
-    .ArtWorkImg{
-      max-width: 65%;
+    .ProductImg{
+      max-width: 45%;
       display: block;
       height: 90%;
       width: auto;
       margin: 2%;
     }
-    .PieceContent{
+    .ProductContent{
       position: absolute;
       top:0;
       left: 65%;
@@ -53,13 +53,13 @@
       height: 100%;
       border: 1px solid black;
 
-     .pieceTitle{
+     .ProductTitle{
       position: absolute;
       top:0;
       color:black;
       margin-left: 10%;
       }
-      .blurb{
+      .Blurb{
       position: absolute;
       top: 25%;
       font-size: 1.2em;
@@ -87,11 +87,6 @@
          text-decoration: none;
       }
       }
-      button:hover{
-      background: linear-gradient($buyRed 80%, red);
-      border: 1px solid black;
-      color: $gray-200;
-      }
       .exit{
       top: -2%;
       right: -2%;
@@ -102,8 +97,13 @@
       }
     }
   }
+  }
 
-
+.thumbNailContainer{
+  .innerWrapper{
+    border: 1px solid black;
+  }
+}
 /// Animations for the modal opening up --------------------------------->
 
 

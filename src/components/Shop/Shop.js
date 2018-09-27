@@ -20,31 +20,17 @@ export class Shop extends React.Component{
 		};
 	}
 
-
-	componentWillMount(){
+	componentDidMount(){
 		this.props.dispatch(fetchProducts())
 	}
-	
-  	loadPage(){
-  		
-		setTimeout(function(){
-             this.setState({loaded:true});
-        }.bind(this),50);
-	}
-
-
-
-
-
+  
 	render(){
-		if(this.state.loaded == false){
-		this.loadPage()
-		}
+		console.log()
 		return(
 			<div className="storePage">
 				<img src={StoreLogo} className={"Title " +(this.state.loaded ? "enter" : "")}/>
 				
-				<ShopSection className="storeSection" products={this.state.products}/>
+				<ShopSection className="storeSection" products={store.getState().shop.products}/>
 				
 			</div>
 		);

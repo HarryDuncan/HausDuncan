@@ -20,7 +20,7 @@ export class ShopSection extends React.Component{
 	render(){
 
 	 var  result = ''
-	 var products = this.state.products.data
+	 var products = this.props.products.data
 	 
 	if(products != null && products.length != 0){
 		const rowCount = products.length / 3;

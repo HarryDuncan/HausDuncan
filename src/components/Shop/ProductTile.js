@@ -4,9 +4,14 @@ import { Card, CardImg, CardBody,
 import {addToCart} from '../../actions/shopActions';
 import {ProductView} from './ProductView/ProductView.js';
 import './ShopStyles.scss';
+import store from '../../store';
+import {connect} from 'react-redux';
 
-
-
+@connect((store) => {
+  return{
+    loggedIn : store.gallery.loggedIn,
+  };
+})
 
 
 export class ProductTile extends React.Component{
@@ -28,8 +33,8 @@ export class ProductTile extends React.Component{
 		}));
 	}
 
-	AddToCart( product){
-		console.log(product);
+	AddToCart(){
+		this.props.dispatch(addToCart(this.props.Data))
 	}
 
 	render(){
@@ -37,7 +42,7 @@ export class ProductTile extends React.Component{
 		var url = product.imageUrl + '/Main.jpg';
 		if (this.state.view == true){
 			return(
-			<ProductView item={product}/>
+			<ProductView item={product} show={this.state.view} viewOff={this.viewImage.bind(this)} buyItem={this.AddToCart.bind(this)}/>
 			)
 		}else{
 		return(
@@ -45,8 +50,8 @@ export class ProductTile extends React.Component{
 		      <CardImg className="ProductMainImg" src={require('../../Images/Products/' + url )} alt={product.ProductName} />
 		   	  <CardBody className="ProductCardBody">
 		      <CardTitle className="ProductTitle">{product.ProductName}</CardTitle>
-		      <CardBody className="ProductPrice">AUD ${product.Price}</CardBody>
-		      <button className="btn btn-primary" onClick={this.AddToCart(this.props.data)}>Add to cart</button>
+		      <CardBody className="ProductPrice">AUD ${product.Price}<br/>{product.Blurb}</CardBody>
+		      <button className="btn btn-primary" onClick={this.AddToCart.bind(this)}>Add to cart</button>
 		      <button className="btn btn-secondary"  onClick={this.viewImage.bind(this)} >View More</button>
 		      </CardBody>
 		      </Card>
