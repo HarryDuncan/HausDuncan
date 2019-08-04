@@ -6,10 +6,6 @@ import '../containers/Sections.scss'
 
 
 export class LoadingPage extends React.Component {
-		constructor(props){
-			super(props)
-		
-		}
 
 
 	componentDidMount(){
@@ -21,7 +17,7 @@ export class LoadingPage extends React.Component {
 
 			return (
 			<div className='splashScreen'>
-			<img className='logo' src={Logo}/>
+			<img className='logo' alt='loading' src={Logo}/>
 			<img className='start' id="my-splash" src={splash}/>
 			</div>
 		);

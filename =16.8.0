@@ -1,0 +1,4 @@
++ @types/react-dom@16.8.5
+added 1 package from 6 contributors and audited 30531 packages in 6.939s
+found 50 vulnerabilities (33 low, 5 moderate, 12 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

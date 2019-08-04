@@ -32,9 +32,9 @@ class App extends Component {
  
    
   componentDidMount(){
-      this.props.dispatch(fetchBanner()),
+      this.props.dispatch(fetchBanner())
       this.props.dispatch(fetchPaintings())
-     if(this.state.loading){
+      if(this.state.loading){
        setTimeout(() => this.setState({ loading: false }), 1500);
       }
   }
@@ -50,7 +50,7 @@ class App extends Component {
         return(
       <BrowserRouter>
       <Switch>
-      <Route exact path="/" exact render={Home} />
+      <Route path="/" exact render={Home} />
       <Route path='/Gallery' render={Gallery} />
       <Route path='/Store' exact component={Store} />
       <Route path='/Login' exact component={Login} />

@@ -87,7 +87,8 @@
   }
   .Left:hover{
    opacity:0.7;
-   transform: scale(1.5)
+   transform: scale(1.5);
+   cursor: pointer;
    }
   .Right{
   width: 7em;
@@ -101,6 +102,7 @@
   }
   .Right:hover{
    opacity:0.9;
+   cursor: pointer;
 
    }
 

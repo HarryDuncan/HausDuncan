@@ -9,13 +9,16 @@ export const ThumbNails = (props) =>{
 	}else{
 		
 		var images = Array.apply(null, {length: props.MultiImages}).map(Number.call, Number);
-		var i = props.MultiImages;
+		// var i = props.MultiImages;
 		
 		var result = 	
 			images.map(function(thumnail, i){
-			<div className="innerWrapper" key={i}>
-			<p>{i}</p>
-			</div>
+				return(
+						<div className="innerWrapper" key={i}>
+							<p>{i}</p>
+						</div>
+					)
+				
 				}
 			)	
 		

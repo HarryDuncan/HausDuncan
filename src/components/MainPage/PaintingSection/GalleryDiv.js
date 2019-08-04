@@ -44,16 +44,12 @@ export class GalleryDiv extends React.Component{
 	}
 
 	render(){
-		var move = this.state.xPos;
-		
-		
-		
 		
 		return(
 			<div className="gallerysection" >
-			<img className="scroll L"  src={scrollLeft} onClick={this.scrollL}/>
-			<img className="scroll R" src={scrollRight} onClick={this.scrollR}/> 
-			<img className="Easel" src={Easel}/>
+			<img className="scroll L"  src={scrollLeft} alt='left' onClick={this.scrollL}/>
+			<img className="scroll R" src={scrollRight} alt='right' onClick={this.scrollR}/> 
+			<img className="Easel" alt='easel' src={Easel}/>
 			<div className="galleryInner">
 			
 			<PaintingObject art={this.state.paintings} xPos={this.state.xPos}/>

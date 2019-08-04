@@ -40,7 +40,7 @@ export class ProductTile extends React.Component{
 	render(){
 		var product = this.props.Data;
 		var url = product.imageUrl + '/Main.jpg';
-		if (this.state.view == true){
+		if (this.state.view === true){
 			return(
 			<ProductView item={product} show={this.state.view} viewOff={this.viewImage.bind(this)} buyItem={this.AddToCart.bind(this)}/>
 			)

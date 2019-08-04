@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap';
+import { Card, CardImg, Col } from 'reactstrap';
 import './PaintingObject.scss';
 
 

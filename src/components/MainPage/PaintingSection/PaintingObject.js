@@ -31,7 +31,7 @@ export class PaintingObject extends React.Component{
 		
 		return(
 
-			<div style={css} className={isIE ? 'mainDivIE' : 'mainDiv'} >
+			<div style={{css}} className={isIE ? 'mainDivIE' : 'mainDiv'} >
 			
 			<div  className='slider'>
 			{result}

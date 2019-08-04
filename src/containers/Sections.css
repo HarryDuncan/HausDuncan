@@ -113,7 +113,7 @@ img::-moz-selection {
     margin-top: 5%;
     margin-right: auto;
     display: block;
-    height: 40%;
+    height: 20%;
     transform: translateX(-60vw);
     transition: transform 500ms ease-out; }
   .section .start {

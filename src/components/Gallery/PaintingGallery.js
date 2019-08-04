@@ -4,8 +4,6 @@ import { Container} from 'reactstrap';
 import './PaintingGallery.scss';
 
 
-
-
 export class PaintingGallery extends React.Component{
 	constructor(props){
 		super(props);
@@ -23,14 +21,10 @@ export class PaintingGallery extends React.Component{
 	 let isIE = /*@cc_on!@*/false || !!document.documentMode;
 	 
 	if(painting !== null && painting.length !== 0){
-		const rowCount = painting.length / 3;
-		 
-		 
 	 	  result =  
 	 	  	painting.map(piece => (
-
-		 	  			<GalleryTile Data={piece} key={piece.ID}/>
-			      		)
+	  			<GalleryTile Data={piece} key={piece.ID}/>
+      			)
 	 	  	)
 	 	  }
 

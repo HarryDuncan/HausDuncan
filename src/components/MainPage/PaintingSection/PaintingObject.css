@@ -121,7 +121,8 @@ img::-moz-selection {
     opacity: 0.2; }
   .mainDiv .Left:hover {
     opacity: 0.7;
-    transform: scale(1.5); }
+    transform: scale(1.5);
+    cursor: pointer; }
   .mainDiv .Right {
     width: 7em;
     position: absolute;
@@ -131,7 +132,8 @@ img::-moz-selection {
     top: 50%;
     opacity: 0.2; }
   .mainDiv .Right:hover {
-    opacity: 0.9; }
+    opacity: 0.9;
+    cursor: pointer; }
   .mainDiv .slider {
     position: absolute;
     width: 100%;

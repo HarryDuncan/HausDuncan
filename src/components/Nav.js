@@ -24,8 +24,7 @@ export class NavBar extends React.Component{
 					
 					<Link className='link' to="/">Home</Link>
 					
-			        <Link className='link' to="/Gallery">Gallery</Link> 
-			        
+			        <Link className='link' to='/Gallery'>Gallery</Link>
 			        <Link className='link' to='/Store'>Store</Link>
 			        
 			     	</Menu>

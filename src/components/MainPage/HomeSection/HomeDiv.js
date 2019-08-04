@@ -3,10 +3,6 @@ import logo from '../../../icons/Logo.svg'
 import {NavBar} from '../../';
 import {SkywardsBanner, MobileHero} from './'
 import store from "../../../store";
-import Vivus from 'vivus';
-
-
-
 
 export class HomeDiv extends React.Component{
 	constructor(props){
@@ -27,7 +23,7 @@ export class HomeDiv extends React.Component{
 	}
 
 	render(){
-		if(this.state.Homeloaded == false){
+		if(this.state.Homeloaded === false){
 			this.loadScreen();
 		}
 		const isMobile = window.innerWidth <= 900;
@@ -38,7 +34,7 @@ export class HomeDiv extends React.Component{
 				<div className="section">
 			<div className="leftHalf" >
 			<NavBar className={this.state.Homeloaded ? 'start' : '' }/>
-			<img className={"logoHome " +  (this.state.Homeloaded ? 'start' : '' )} src={logo} />
+			<img alt='mobile' className={"logoHome " +  (this.state.Homeloaded ? 'start' : '' )} src={logo} />
 			<MobileHero images={this.state.images}/>
 		
 			</div>
@@ -50,7 +46,7 @@ export class HomeDiv extends React.Component{
 			<div className="section">
 			<div className="leftHalf" >
 			<NavBar className={this.state.Homeloaded ? 'start' : '' }/>
-			<img className={"logoHome " +  (this.state.Homeloaded ? 'start' : '' )} src={logo} />
+			<img alt='logo' className={"logoHome " +  (this.state.Homeloaded ? 'start' : '' )} src={logo} />
 		
 			</div>
 			<SkywardsBanner images={this.state.images} transition={this.state.Homeloaded}/>

@@ -1,14 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import {PaintingGallery} from './';
 import store from '../../store';
 import GalleryLogo from '../../icons/GalleryLogo.svg';
-import {Footer, NavBar} from '../';
+import {NavBar} from '../';
+import {ViewItemPanel} from '../UI/ViewItemPanel';
+
 
 export class GallerySection extends React.Component{
 	constructor(props){
 		super(props);
-		this.state= {
+		this.state = {
 			paintings : store.getState().gallery.paintings,
 			loaded : false,
 		};
@@ -26,16 +28,17 @@ export class GallerySection extends React.Component{
 
 
 	render(){
-		if(this.state.loaded == false){
+		if(this.state.loaded === false){
 		this.loadPaintings()
 		}
 		return(
 			<div className="gallerypage">
 				<NavBar/>
-				<img src={GalleryLogo} className={"Title " + (this.state.loaded ? "enter" : "")}/>
+				<img src={GalleryLogo} alt={'Haus Duncan Gallery'} className={"Title " + (this.state.loaded ? "enter" : "")}/>
 				<div className={"galDiv " + (this.state.loaded ? "enter" : "")}>
 				<PaintingGallery  art={this.state.paintings}/>
 				</div>
+				<ViewItemPanel/>
 			</div>
 		);
 	}

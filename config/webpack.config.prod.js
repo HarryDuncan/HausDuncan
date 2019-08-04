@@ -56,6 +56,7 @@ new webpack.DefinePlugin({
 // It compiles slowly and is focused on producing a fast and minimal bundle.
 // The development configuration is different and lives in a separate file.
 module.exports = {
+  mode: 'production',
   // Don't attempt to continue if there are any errors.
   bail: true,
   // We generate sourcemaps in production. This is slow but gives good results.
@@ -108,6 +109,10 @@ module.exports = {
       // please link the files into your node_modules/ and let module-resolution kick in.
       // Make sure your source files are compiled, as they will not be processed in any way.
       new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
+      new HtmlWebpackPlugin({}),
+      new InterpolateHtmlPlugin(env.raw),
+    
+  ]
     ],
   },
   module: {
@@ -261,9 +266,7 @@ module.exports = {
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     // In production, it will be an empty string unless you specify "homepage"
     // in `package.json`, in which case it will be the pathname of that URL.
-    new InterpolateHtmlPlugin(env.raw),
-    // Generates an `index.html` file with the <script> injected.
-    new HtmlWebpackPlugin({
+     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
       minify: {
@@ -279,6 +282,9 @@ module.exports = {
         minifyURLs: true,
       },
     }),
+    new InterpolateHtmlPlugin(HtmlWebpackPlugin,env.raw),
+    // Generates an `index.html` file with the <script> injected.
+   
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
     // It is absolutely essential that NODE_ENV was set to production here.
